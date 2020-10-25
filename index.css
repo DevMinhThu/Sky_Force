@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "ColorTube";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#canvas {
+  background-image: url('./images/planet.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
