@@ -11,8 +11,115 @@ body {
 }
 
 #canvas {
-  background-image: url('./images/planet.jpg');
+  background-image: url("./images/planet.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-size: 100% 100%;
+}
+
+.start-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+#game-screen {
+  position: absolute;
+  z-index: 1;
+}
+
+h1 {
+  color: rgb(255, 147, 205);
+  text-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22),
+    0 0 1px #000;
+  font-size: 140px;
+  width: 100%;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button {
+  width: 300px;
+  height: 100px;
+  outline: none;
+  border: none;
+  font-size: 50px;
+  border-radius: 999px;
+  color: #fff;
+  box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  background: #fbd3e9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(207, 78, 147), #fbd3e9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(235, 91, 168), #fbd3e9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+p {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button:active {
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
+}
+
+/* .shadow-active {
+  box-shadow: inset 0 0 10px rgb(0, 0, 0);
+} */
+
+.point-screen {
+  position: absolute;
+  z-index: 2;
+  font-size: 90px;
+  color: rgb(255, 147, 205);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 2px 5px 10px rgba(0, 0, 0, 0.22),
+    0 0 1px #000;
+  top: 2%;
+  right: 3%;
+  display: none;
+}
+
+.over-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.over-screen h1 {
+  top: 5%;
+}
+
+.over-screen h2 {
+  position: absolute;
+  z-index: 3;
+  font-size: 170px;
+  color: rgb(255, 147, 205);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 18%;
+  text-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22),
+    0 0 1px #000;
+}
+
+@font-face {
+  font-family: ColorTube;
+  src: url("Dokdo-Regular.ttf") format("opentype");
 }

@@ -4,11 +4,18 @@ const context = canvasEl.getContext("2d");
 
 canvasEl.width = window.innerWidth;
 canvasEl.height = window.innerHeight;
+
 const game = {
   gameOver: false,
 };
-// get element
-let overScreen = document.querySelector(".over-screen");
+
+//Get element
+let startScreen = document.querySelector('.start-screen');
+let startButton = document.querySelector('.start-button');
+let overScreen = document.querySelector('.over-screen');
+let againButton = document.querySelector('.again-button')
+let pointScreen = document.querySelector('.point-screen');
+let totalPoint = document.querySelector('.total-point');
 
 //=== CREATE PLAYER_PLANE ===
 let player_plane = new Sprite(
@@ -119,6 +126,7 @@ function enemy(x, y, dx, dy, img_enemy, enemy_width, enemy_height, rotation) {
     // TH: enemy vuot qua truc Oy ==> delete enemy
     if (this.y > innerHeight + this.height) {
       this.delete();
+      gameOver = true;
     }
 
     this.draw();
@@ -240,6 +248,12 @@ function handleCollisions() {
 }
 
 //=== ACTION OF GAME ===
+
+//Click 
+startButton.addEventListener('click', () => {
+  startScreen.style.display = 'none';
+})
+
 // clear screen
 function clear() {
   context.clearRect(0, 0, canvasEl.width, canvasEl.height);
