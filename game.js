@@ -9,13 +9,13 @@ const game = {
   gameOver: false,
 };
 
-//Get element
-let startScreen = document.querySelector('.start-screen');
-let startButton = document.querySelector('.start-button');
-let overScreen = document.querySelector('.over-screen');
-let againButton = document.querySelector('.again-button')
-let pointScreen = document.querySelector('.point-screen');
-let totalPoint = document.querySelector('.total-point');
+//=== Get element ===
+let startScreen = document.querySelector(".start-screen");
+let startButton = document.querySelector(".start-button");
+let overScreen = document.querySelector(".over-screen");
+let againButton = document.querySelector(".again-button");
+let pointScreen = document.querySelector(".point-screen");
+let totalPoint = document.querySelector(".total-point");
 
 //=== CREATE PLAYER_PLANE ===
 let player_plane = new Sprite(
@@ -249,10 +249,10 @@ function handleCollisions() {
 
 //=== ACTION OF GAME ===
 
-//Click 
-startButton.addEventListener('click', () => {
-  startScreen.style.display = 'none';
-})
+//Click
+startButton.addEventListener("click", () => {
+  startScreen.style.display = "none";
+});
 
 // clear screen
 function clear() {
