@@ -351,3 +351,5 @@ document.onkeyup = (e) => {
     player_plane.behaviors[1].enable = false;
   }
 };
+
+// check check
